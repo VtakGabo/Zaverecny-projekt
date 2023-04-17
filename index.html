@@ -5,15 +5,64 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<section>
-	<form method="POST" action="/render">
-		<button>Zobraziť</button>
-		<textarea name="ves"></textarea>
-	</form>
-</section>
-<section>
-	<img id="output" />
-</section>
-<script type="text/javascript" src="script.js" ></script>
+	<section id = "section">
+		<img src="raindrops_back.png" id="raindrops_back">
+		<img src="rain.png" id="rain">
+		<img src="clouds.png" id="clouds">
+		<h2 id = "text"> SUPER ÚŽASNÝ PROJEKT</h2>
+		<a class="btn" href=#head id="btn">EXPLORE</a>
+		<img src="city.png" id="city">
+		<img src="bridge.png" id="bridge">
+		<img src="raindrops-front.png" id="raindrops_front">
+	</section>
+
+	<div class = heading id="heading">
+		<h2 id ="head">Vektorový súbor formátu VES:</h2>
+	</div>
+
+
+	<div  class="sec">
+		<section>
+		<form method="POST" action="/render">
+			<textarea  name="ves"></textarea>
+			<input  class ="button" type="submit" value="ZOBRAZIŤ">
+			
+			<!--<button>Zobraziť</button>-->
+		</form>
+		</section>
+
+		<section>
+			<img class="obr" id="output" />
+		</section>
+	</div>
+
+	<script>
+		let clouds = document.getElementById('clouds');
+		let raindrops_back = document.getElementById('raindrops_back');
+		let city = document.getElementById('city');
+		let bridge = document.getElementById('bridge');
+		let raindrops_front = document.getElementById('raindrops_front');
+		let text = document.getElementById('text');
+		let btn = document.getElementById('btn');
+		let rain = document.getElementById('rain');
+
+
+		window.addEventListener('scroll',function(){
+			let value = window.scrollY;
+			clouds.style.left = value*0.25 + 'px';
+			city.style.top = value* 1.05 + 'px';
+			bridge.style.top = value * 0 + 'px';
+			text.style.marginTop = value * 0.65 + 'px';
+			btn.style.marginTop = value * 0.65 + 'px';
+			raindrops_back.style.left = value*0.25 + 'px';
+			raindrops_back.style.top = value*0.5 + 'px';
+			rain.style.top = value*0.2 + 'px';
+			raindrops_front.style.left = value*0.25 + 'px';
+			raindrops_front.style.top = value*0.5 + 'px';
+
+			
+		})
+	</script>
+	<script type="text/javascript" src="script.js" ></script>
 </body>
 </html>
