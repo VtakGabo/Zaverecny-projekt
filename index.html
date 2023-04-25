@@ -2,6 +2,7 @@
 <html>
 <head>
 	<title>Vector Script GUI</title>
+	<meta charset="UTF-8" />
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
@@ -24,10 +25,12 @@
 
 	<div  class="sec">
 		<section>
-		<form method="POST" action="/render">
+		<form name= okno method="POST" action="/render">
 			<textarea  name="ves"></textarea>
 			<!--<input  class ="button" type="submit" value="ZOBRAZIŤ">-->	
 			<button class = "button" id = "submit" >Zobraziť</button>
+			<button class = "button" onclick="okno[0].value='';event.preventDefault();">Vymazať text</button>
+
 		</form>
 		</section>
 
@@ -62,6 +65,7 @@
 
 			
 		})
+ 
 	</script>
 	<script type="text/javascript" src="script.js" ></script>
 
