@@ -1,12 +1,4 @@
-from PIL import Image
-from random import randint
-
-
-def random_color():
-  r = randint(0, 255)
-  g = randint(0, 255)
-  b = randint(0, 255)
-  return (r, g, b)
+from PIL import Image, ImageDraw
 
 class Reader:
   def __init__(self, content, width):
@@ -93,6 +85,10 @@ class Reader:
         color = self.hexColor(line[5])
         self.filled_rect(self.convert_point((Ax, Ay)), self.convert_x(width), self.convert_x(height), color)
         
+
+
+  
+
   def clear_im(self, color):
     for i in range(self.output_width):
       for j in range(self.output_height):
@@ -238,13 +234,3 @@ class Reader:
       for y in range(A[1], A[1]+height):
         body.append((x,y))
     self.overenie(body, color)
-
-def render_ves():
-  width = 640
-  height = 400
-  img = Image.new('RGB', (width, height), (255,255,255))
-  farba = random_color()
-  for x in range(200, 401):
-    for y in range(100, 201):
-      img.putpixel((x, y), farba)
-  return img
