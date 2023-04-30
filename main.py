@@ -1,7 +1,7 @@
 from io import BytesIO
 from flask import Flask, send_file, request, send_from_directory
-from VES import Reader
-app = Flask(name)
+from ves import Reader
+app = Flask(__name__)
 app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
 
 def serve_pil_image(img):
