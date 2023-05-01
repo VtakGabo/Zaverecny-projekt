@@ -6,16 +6,16 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-
+	
 	<section id = "section">
-		<img src="raindrops_back.png" id="raindrops_back">
-		<img src="rain.png" id="rain">
-		<img src="clouds.png" id="clouds">
+		<img class ="img" src="raindrops_back.png" id="raindrops_back">
+		<img class ="img" src="rain.png" id="rain">
+		<img class ="img" src="clouds.png" id="clouds">
 		<h2 id = "text"> SUPER ÚŽASNÝ PROJEKT</h2>
 		<a class="btn" href=#head id="btn">EXPLORE</a>
-		<img src="city.png" id="city">
-		<img src="bridge.png" id="bridge">
-		<img src="raindrops-front.png" id="raindrops_front">
+		<img class ="img" src="city.png" id="city">
+		<img class ="img" src="bridge.png" id="bridge">
+		<img class ="img" src="raindrops-front.png" id="raindrops_front">
 	</section>
 
 	<div class = heading id="heading">
@@ -27,9 +27,8 @@
 		<section>
 		<form name= okno method="POST" action="/render" id="form">
 			<textarea  name="ves"></textarea>
-			<!--<input  class ="button" type="submit" value="ZOBRAZIŤ">-->	
 			<button class = "button" id = "submit" >Zobraziť</button>
-			<button class="button" id="clear">Zmazať</button>
+			<button class="button" id="clear">Zmazať obrázok</button>
 			<button class = "button" onclick="okno[0].value='';event.preventDefault();">Vymazať text</button>
 
 		</form>
