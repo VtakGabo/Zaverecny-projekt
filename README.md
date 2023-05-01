@@ -10,3 +10,5 @@ Odkaz na wordpress: http://zaverecny-projekt.8u.cz/wp-login.php?redirect_to=http
 username:projekt20233
 password:p*ano)^8LKYfhyffn$
 Opravil som vsetko takze to uz vykresluje a pridal som este tlacitko na vymazanie obrazku
+
+stranka: https://super-uzasny-projekt.onrender.com/#head
